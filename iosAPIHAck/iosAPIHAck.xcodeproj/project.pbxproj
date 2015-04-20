@@ -14,6 +14,9 @@
 		C35E50591AE52E1700B2E3AA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C35E50581AE52E1700B2E3AA /* Images.xcassets */; };
 		C35E505C1AE52E1700B2E3AA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C35E505A1AE52E1700B2E3AA /* LaunchScreen.xib */; };
 		C35E50681AE52E1700B2E3AA /* iosAPIHAckTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C35E50671AE52E1700B2E3AA /* iosAPIHAckTests.m */; };
+		C35E50721AE52E5C00B2E3AA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C35E50711AE52E5C00B2E3AA /* Foundation.framework */; };
+		C35E50741AE52E7600B2E3AA /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C35E50731AE52E7600B2E3AA /* CoreMotion.framework */; };
+		C35E50761AE52E8300B2E3AA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C35E50751AE52E8300B2E3AA /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,9 @@
 		C35E50611AE52E1700B2E3AA /* iosAPIHAckTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iosAPIHAckTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C35E50661AE52E1700B2E3AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C35E50671AE52E1700B2E3AA /* iosAPIHAckTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iosAPIHAckTests.m; sourceTree = "<group>"; };
+		C35E50711AE52E5C00B2E3AA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C35E50731AE52E7600B2E3AA /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		C35E50751AE52E8300B2E3AA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +53,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C35E50761AE52E8300B2E3AA /* CoreLocation.framework in Frameworks */,
+				C35E50741AE52E7600B2E3AA /* CoreMotion.framework in Frameworks */,
+				C35E50721AE52E5C00B2E3AA /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +72,9 @@
 		C35E503F1AE52E1700B2E3AA = {
 			isa = PBXGroup;
 			children = (
+				C35E50751AE52E8300B2E3AA /* CoreLocation.framework */,
+				C35E50731AE52E7600B2E3AA /* CoreMotion.framework */,
+				C35E50711AE52E5C00B2E3AA /* Foundation.framework */,
 				C35E504A1AE52E1700B2E3AA /* iosAPIHAck */,
 				C35E50641AE52E1700B2E3AA /* iosAPIHAckTests */,
 				C35E50491AE52E1700B2E3AA /* Products */,

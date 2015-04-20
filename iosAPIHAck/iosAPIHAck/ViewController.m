@@ -8,16 +8,58 @@
 
 #import "ViewController.h"
 
+
+
 @interface ViewController ()
 
 @end
 
 @implementation ViewController
 
+@synthesize activityManager;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    if (![CMMotionActivityManager isActivityAvailable]) {
+        UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"No atctivity" message:@"Nothing detected" delegate:self cancelButtonTitle:@"Close" otherButtonTitles:nil, nil];
+        [alert show];
+        return;
+    }
+    
+    activityManager = [CMMotionActivityManager new];
+    [activityManager startActivityUpdatesToQueue:[NSOperationQueue new] withHandler:^(CMMotionActivity *activity) {
+        NSLog(@"The type of activity is %@", activity.description);
+        [self performSelectorOnMainThread:@selector(updateActivity:) withObject:activity waitUntilDone:YES];
+    }];
 }
+
+- (void)updateActivity:(CMMotionActivity*)activity{
+    
+    if (activity.walking) {
+        _activityLabel.text = @"walking";
+        [self fetchImages];
+    }
+    else{
+        _activityLabel.text = @"unwalking";
+    }
+
+}
+
+- (void)fetchImages{
+    
+    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:@"https://api.instagram.com/v1/tags/walking/media/recent?access_token=32423874.0425678.ce6b198642fa4116893baddd7c5a9bcf"]];
+    NSURLSession *urlSession = [NSURLSession sharedSession];
+    NSURLSessionDataTask *task = [urlSession dataTaskWithRequest:urlRequest completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        
+        NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+        NSLog(@"%@", json);
+    }];
+    [task resume];
+
+    }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
