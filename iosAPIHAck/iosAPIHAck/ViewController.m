@@ -38,10 +38,11 @@
     
     if (activity.walking) {
         _activityLabel.text = @"walking";
-        [self fetchImages];
-    }
+            }
     else{
         _activityLabel.text = @"unwalking";
+        [self fetchImages];
+
     }
 
 }
@@ -53,14 +54,16 @@
     NSURLSessionDataTask *task = [urlSession dataTaskWithRequest:urlRequest completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         
         NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-        NSLog(@"%@", json);
+        NSDictionary * arrayOfImages = [json valueForKey:@"data"];
+        NSDictionary * allImages = [arrayOfImages valueForKey:@"images"];
+        NSDictionary * standardImgs = [allImages valueForKey:@"standard_resolution"];
+        NSArray * imageUrls = [standardImgs valueForKey:@"url"];
+        NSLog(@" the images has %lu elements and they are: %@", (unsigned long)imageUrls.count, imageUrls);
+        
     }];
+    
     [task resume];
-
-    }
-
-
-
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
