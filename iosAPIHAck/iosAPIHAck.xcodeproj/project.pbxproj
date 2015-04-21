@@ -17,6 +17,7 @@
 		C35E50721AE52E5C00B2E3AA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C35E50711AE52E5C00B2E3AA /* Foundation.framework */; };
 		C35E50741AE52E7600B2E3AA /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C35E50731AE52E7600B2E3AA /* CoreMotion.framework */; };
 		C35E50761AE52E8300B2E3AA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C35E50751AE52E8300B2E3AA /* CoreLocation.framework */; };
+		C3EB1C671AE652BA00DDE2EB /* photoCellCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3EB1C661AE652BA00DDE2EB /* photoCellCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,8 @@
 		C35E50711AE52E5C00B2E3AA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C35E50731AE52E7600B2E3AA /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		C35E50751AE52E8300B2E3AA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C3EB1C651AE652BA00DDE2EB /* photoCellCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = photoCellCollectionViewCell.h; path = ../photoCellCollectionViewCell.h; sourceTree = "<group>"; };
+		C3EB1C661AE652BA00DDE2EB /* photoCellCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = photoCellCollectionViewCell.m; path = ../photoCellCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +96,8 @@
 		C35E504A1AE52E1700B2E3AA /* iosAPIHAck */ = {
 			isa = PBXGroup;
 			children = (
+				C3EB1C651AE652BA00DDE2EB /* photoCellCollectionViewCell.h */,
+				C3EB1C661AE652BA00DDE2EB /* photoCellCollectionViewCell.m */,
 				C35E504F1AE52E1700B2E3AA /* AppDelegate.h */,
 				C35E50501AE52E1700B2E3AA /* AppDelegate.m */,
 				C35E50521AE52E1700B2E3AA /* ViewController.h */,
@@ -232,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C35E50541AE52E1700B2E3AA /* ViewController.m in Sources */,
+				C3EB1C671AE652BA00DDE2EB /* photoCellCollectionViewCell.m in Sources */,
 				C35E50511AE52E1700B2E3AA /* AppDelegate.m in Sources */,
 				C35E504E1AE52E1700B2E3AA /* main.m in Sources */,
 			);
@@ -428,6 +434,7 @@
 				C35E506D1AE52E1700B2E3AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C35E506E1AE52E1700B2E3AA /* Build configuration list for PBXNativeTarget "iosAPIHAckTests" */ = {
 			isa = XCConfigurationList;
@@ -436,6 +443,7 @@
 				C35E50701AE52E1700B2E3AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

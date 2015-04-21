@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
 
 @interface photoCellCollectionViewCell : UICollectionViewCell
+
+
+@property (nonatomic, strong) IBOutlet UIImageView *imageView;
 
 @end

@@ -9,12 +9,15 @@
 #import <UIKit/UIKit.h>
 #import <CoreMotion/CoreMotion.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic, strong)CMMotionActivityManager *activityManager;
 @property (weak, nonatomic) IBOutlet UILabel *activityLabel;
 
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+
 
 
 @end
+
 
